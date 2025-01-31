@@ -1,0 +1,99 @@
+2.1 Django files Explanantion
+==============================
+
+ I. Directory Structure
+II. Explanation of Each File and Directory
+
+
+***************************************************************************************************
+I. Directory Structure
+
+	djproject/
+	    manage.py
+	    myproject/
+	        __init__.py
+	        asgi.py
+	        settings.py
+	        urls.py
+	        wsgi.py
+
+***************************************************************************************************
+II. Explanation of Each File and Directory
+-------------------------------------------
+
+	1. 'djproject/' (Outer Directory)
+
+		- This is the root directory of your Django project. 
+		- It contains the 'manage.py' file and a subdirectory with the name ('myproject' in this case) which 
+		  houses the actual project settings and configurations.
+
+	2. 'manage.py'
+		- 'Role'             : This is a command-line utility that lets you interact with your Django project in various ways.
+		- 'Responsibilities' : 
+		  - Running the development server ('python manage.py runserver').
+		  - Making and applying migrations ('python manage.py makemigrations' and 'python manage.py migrate').
+		  - Creating new apps within the project ('python manage.py startapp <app_name>').
+		  - Opening the Django shell ('python manage.py shell').
+
+	3. 'myproject/' (Inner Directory)
+		- This directory contains the main settings and configurations for your Django project. 
+		- It is often referred to as the project directory.
+
+		'__init__.py'
+		------------
+			- 'Role'             : This is an empty file that designates the directory as a Python package.
+			- 'Responsibilities' : 
+			  - It allows Python to recognize the directory as a package, enabling the import of modules from this directory.
+
+		'asgi.py'
+		--------
+			- 'Role'		     : The asgi.py file serves as the entry-point for ASGI-compatible 
+			                       web servers to interact with your Django project. 
+					               It enables your application to handle asynchronous tasks, such as real-time updates 
+					               or long-lived network connections.
+
+
+			- 'Responsibilities' :
+				- asgi.py prepares your project to be deployed using ASGI servers like Daphne or Uvicorn. 
+				  These servers can handle asynchronous requests.
+
+		'settings.py'
+		-------------
+			- 'Role'             : This file contains all the configuration settings for your Django project.
+			- 'Responsibilities' :
+			  - Configuring database settings.
+			  - Specifying installed apps.
+			  - Setting middleware.
+			  - Configuring static and media files settings.
+			  - Defining security settings such as secret key, allowed hosts, and more.
+
+		'urls.py'
+		---------
+			- 'Role'             : This file contains URL declarations for your Django project; 
+			                       a "table of contents" for your site.
+			- 'Responsibilities' :
+			  - Routing URLs to their respective views.
+			  - Including URLs from different apps to the main project URL configuration.
+
+		'wsgi.py'
+		---------
+		- 'Role'             : This file stands for Web Server Gateway Interface and serves as an entry-point for 
+		                       WSGI-compatible web servers to serve your project.
+		- 'Responsibilities' :
+		  - Facilitating the deployment of your Django application.
+		  - Configuring the WSGI application to be used by servers like Gunicorn, uWSGI, etc.
+
+***************************************************************************************************
+	The 'myproject' folder (inner directory) is the core of your Django project. 
+	It holds all the settings, configurations, and entry points that your project needs to function.
+
+
+	- 'manage.py'     : Command-line utility for project management.
+	- 'myproject'     : Core configuration and settings for the project.
+	
+		  - '__init__.py' : Designates the directory as a package.
+		  - 'asgi.py'     : Configures and sets up the ASGI application for handling asynchronous requests.
+		  - 'settings.py' : Contains all the settings and configurations for your project.
+		  - 'urls.py'     : URL routing and mapping.
+		  - 'wsgi.py'     : Configures and sets up the WSGI application for handling synchronous requests.
+

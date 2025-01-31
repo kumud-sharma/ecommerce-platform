@@ -1,0 +1,34 @@
+
+1. create a folder on your local system at your desired location
+    
+
+2. open it in ide
+
+3. create virtual environmnet
+    python -m venv venv
+
+4. Activate virtual ennvironment
+    venv/Scripts/activate
+
+5. Install Django
+    pip install django
+
+
+6. Create a Django Project
+    django-admin startproject myproject .
+
+
+    This will create a directory structure like this:
+
+    djproject/
+    myproject/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    manage.py
+
+7. django-admin startapp appname
+
+8. go to settings.py and add appname in INSTALLED_APPS
+

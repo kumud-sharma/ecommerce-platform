@@ -1,0 +1,130 @@
+3. Common django-admin Commands:
+================================
+
+    - Django provides a command-line utility called django-admin that comes 
+      with a variety of commands to help manage Django projects. 
+
+***************************************************************************************************
+Common django-admin Commands
+----------------------------
+
+    1. startproject
+    ---------------
+       - Usage       : django-admin startproject projectname
+       - Description : Creates a new Django project with the specified name. 
+                       It sets up a new directory structure with the necessary initial files for a Django project.
+       - Example     : django-admin startproject myproject, django-admin startproject myproject .
+
+    2. startapp
+    -----------
+       - Usage       : django-admin startapp appname
+       - Description : Creates a new Django app within an existing project. 
+                       This app will contain models, views, templates, and other components 
+                       related to a specific feature or functionality.
+       - Example     : django-admin startapp myapp
+
+    3. runserver
+    ------------
+       - Usage       : django-admin runserver [optional_port]
+       - Description : Starts the development server, which listens for requests and serves your Django project. 
+                       If no port is specified, it defaults to port 8000.
+       - Example     : django-admin runserver or django-admin runserver 8080
+
+    4. migrate
+    ----------
+       - Usage       : django-admin migrate
+       - Description : Applies database migrations. 
+                       It looks at the INSTALLED_APPS setting and creates any necessary database tables 
+                       according to the models defined in your applications.
+       - Example     : django-admin migrate
+
+    5. makemigrations
+    -----------------
+       - Usage       : django-admin makemigrations [app_label]
+       - Description : Creates new migration files based on the changes detected in your models. 
+                       These migrations are then applied to the database using the migrate command.
+       - Example     : django-admin makemigrations or django-admin makemigrations myapp
+
+    6. createsuperuser
+    ------------------
+       - Usage       : django-admin createsuperuser
+       - Description : Prompts you to create a new superuser with administrative privileges, 
+                       which can log into the Django admin interface.
+       - Example     : django-admin createsuperuser
+
+    7. shell
+    --------
+       - Usage       : django-admin shell
+       - Description : Opens an interactive Python shell with Django settings pre-configured, 
+                       allowing you to interact with your projects models and other components.
+       - Example     : django-admin shell
+
+    8. dbshell
+    ----------
+       - Usage       : django-admin dbshell
+       - Description : Opens the database shell (such as psql for PostgreSQL, mysql for MySQL) for the projects configured database.
+       - Example     : django-admin dbshell
+
+    9. check
+    --------
+       - Usage       : django-admin check
+       - Description : Checks for common problems in your Django project without making database changes.
+       - Example     : django-admin check
+
+    10. collectstatic
+    -----------------
+        - Usage       : django-admin collectstatic
+        - Description : Collects static files from each app in your project and places them into 
+                        the directory specified by the STATIC_ROOT setting.
+        - Example     : django-admin collectstatic
+
+    11. test
+    --------
+        - Usage       : django-admin test [app_label.TestClass.test_method]
+        - Description : Discovers and runs tests within your project. 
+                        You can specify individual tests to run by providing their full Python path.
+        - Example     : django-admin test myapp or django-admin test myapp.tests.MyTestClass
+
+    12. flush
+    ---------
+        - Usage       : django-admin flush
+        - Description : Deletes all data in the database and reinitializes it with the initial data from installed apps.
+        - Example     : django-admin flush
+
+    13. loaddata
+    ------------
+        - Usage       : django-admin loaddata <fixture>
+        - Description : Loads data from fixtures into the database. 
+                        Fixtures are typically JSON or YAML files containing serialized data.
+        - Example     : django-admin loaddata initial_data.json
+
+    14. dumpdata
+    ------------
+        - Usage       : django-admin dumpdata [app_label.ModelName]
+        - Description : Outputs the contents of the database as a JSON, XML, or YAML fixture.
+        - Example     : django-admin dumpdata or django-admin dumpdata myapp.MyModel
+
+    15. sqlmigrate
+    --------------
+        - Usage       : django-admin sqlmigrate app_label migration_number
+        - Description : Displays the SQL statements for a specific migration.
+        - Example     : django-admin sqlmigrate myapp 0001
+
+    16. diffsettings
+    ----------------
+        - Usage       : django-admin diffsettings
+        - Description : Displays differences between the current settings file and Djangos default settings.
+        - Example     : django-admin diffsettings
+
+    17. showmigrations
+    ------------------
+        - Usage       : django-admin showmigrations
+        - Description : Lists all migrations and their status.
+        - Example     : django-admin showmigrations
+
+    18. inspectdb
+    -------------
+        - Usage       : django-admin inspectdb
+        - Description : Inspects the database tables and generates model code.
+        - Example     : django-admin inspectdb
+

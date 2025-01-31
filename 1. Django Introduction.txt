@@ -1,0 +1,92 @@
+1. Django Introduction:
+=======================
+
+Topics:
+------------
+  I.Introduction 
+ II.Key Features
+III.Django MVT Architecture
+
+*************************************************************************************************************
+I. Introduction :
+-----------------
+    - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. 
+    - Built by experienced developers, it takes care of much of the hassle of web development, 
+      so you can focus on writing your app without needing to reinvent the wheel. 
+    - It’s free and open source.
+
+II. Key Features :
+------------------
+
+    1.ORM (Object-Relational Mapping)
+    ---------------------------------
+
+        - Django comes with a powerful ORM that allows developers to interact with the database 
+          using Python code instead of writing SQL queries. 
+        - This makes database operations more intuitive and less error-prone.
+
+    2. Admin Interface
+    ------------------
+        - Django automatically generates an admin interface for your project, 
+          allowing you to manage your application's data easily. 
+        - This is highly customizable and can be used to create a powerful backend system.
+
+    3. Authentication
+    -----------------
+        - Django includes a robust authentication system that handles user authentication and authorization. 
+        - It provides tools for managing users, groups, permissions, and more.
+
+    4. Scalability
+    --------------
+        - Django is designed to help developers take applications from concept to completion as quickly as possible. 
+        - It can handle high traffic and large datasets, making it suitable for scalable web applications.
+
+    5. Security
+    -----------
+        - Django takes security seriously and helps developers avoid common security mistakes. 
+        - It includes features such as protection against SQL injection, cross-site scripting, 
+          cross-site request forgery, and clickjacking.
+
+    6. Versatile
+    ------------
+        - Django is suitable for any type of project, from content management systems and e-commerce sites 
+          to social networks and scientific computing platforms.
+
+    7. Template Engine
+    ------------------
+        - Django's template engine allows you to separate design from business logic. 
+        - It enables you to create dynamic HTML content by combining data with HTML templates.
+
+    8. URL Routing
+    --------------
+        - Django's URL routing mechanism maps URLs to views, making it easy to design a 
+          clean URL structure for your application.
+
+    9. Internationalization
+    -----------------------
+        - Django has built-in support for multilingual websites, allowing you to easily translate 
+          your application into different languages.
+
+*************************************************************************************************************
+III. Django MVT Architecture
+----------------------------
+
+    - Django follows the Model-View-Template (MVT) architectural pattern. 
+    - This is similar to the Model-View-Controller (MVC) pattern, with a slight difference in 
+      the terminology and handling of the controller logic.
+
+    Model
+    -----
+        - The model is responsible for managing the data of the application. 
+        - It defines the structure of the database and is a single, definitive source of information about your data. 
+        - Each model maps to a single database table.
+
+    View
+    ----
+        - The view is responsible for executing the business logic and interacting with the model. 
+        - It processes user input, retrieves data from the model, and passes it to the template for rendering.
+
+    Template
+    --------
+        - The template is responsible for rendering the data provided by the view in a presentable format. 
+        - It defines how the data should be displayed to the user.
